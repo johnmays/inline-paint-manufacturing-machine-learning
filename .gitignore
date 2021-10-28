@@ -11,3 +11,4 @@ __pycache__/
 
 # Jupyter stuff:
 /.ipynb_checkpoints 
+still_paint/.DS_Store
