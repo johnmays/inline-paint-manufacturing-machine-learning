@@ -8,12 +8,12 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 # For the HPC:
 # data_directory = '/home/jkm100/augmented_dataset_1'
-data_directory = '/Users/johnmays/Documents/Wirth Lab/still_data/small_datasets/32_32_pooled_from_1024'
+data_directory = '/Users/johnmays/Documents/Wirth Lab/still_data/Post-Hinc_small_dasets/Post-Hinc_64_64'
 dispersion_times = ['01', '03', '08', '15']  # these are the categories
 os.chdir(data_directory)
 os.getcwd()
 
-train_batches = keras.preprocessing.image.ImageDataGenerator(preprocessing_function=tf.keras.applications.vgg16.preprocess_input).flow_from_directory(directory=data_directory, target_size=(32, 32), classes=dispersion_times, batch_size=64)
+train_batches = keras.preprocessing.image.ImageDataGenerator(preprocessing_function=tf.keras.applications.vgg16.preprocess_input).flow_from_directory(directory=data_directory, target_size=(64,64), classes=dispersion_times, batch_size=64)
 
 
 # fully connected network for 2D images:
